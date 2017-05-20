@@ -1,0 +1,142 @@
+(setf A (read))      
+(setf B (read))
+(delete B A)
+
+(print A)
+---------------------------------------------------
+(setf A (read) )
+(setf B A)
+(print A)
+
+(
+loop while (> A 1) do
+(setf B (* B (- A 1)))
+(setf A (- A 1))
+)
+(print B)
+-------------------------------------
+(setq X 10)
+ (setq A 1)
+ (setq B 1)
+ (setq C 1)
+ (setq D 1)
+ (print A)
+ 
+    (loop while (< D X) do
+     
+      (print C)
+      (setf C (+ A B))
+      
+      (setf A B)
+      (setf B C)
+      (setf D (+ D 1))
+)-
+------------------------------------------------
+(defun fact(Y)
+    (if (= Y 1) 1 (* Y (fact(- Y 1) )) )  ) 
+(setf X (read))
+(print (fact X ))
+---------------------------------------------
+(setf A (read))
+(setf B (read))
+(setf C '())
+
+(print(remove-duplicates(append A B)))
+
+(setf N (length A))
+
+(
+ loop for I from 0 to N do
+      ( if (member (nth I A) B) (setf C (cons (nth I A) C )) )
+)      
+(print (reverse C))
+
+(setf C '())
+
+(
+ loop for I from 0 to (- N 1) do
+     ( if (not(member (nth I A) B))  (setf C (cons (nth I A) C )) )
+)
+(print (reverse C))
+------------------------------------------------------------
+(setf A (read))
+(setf C '())
+(setf N (length A))
+
+(
+ loop for I from 0 to (- N 1) do
+     ( setf C (cons (reduce #'min  A) C) )
+    (setf A (remove (reduce #'min  A) A))
+)
+(print (reverse C))
+-----------------------------------
+(setf A (read))
+(setf B (read))
+(setf N (length A))
+(
+ loop for I from 0 to (- N 1) do
+ ( if (equal (nth I A) B) (princ "Member") )
+)
+-----------------------------------------------------------
+(setf A (read))
+(setf B (read))
+(setf C ())
+(setf D ())
+(setf E B)
+(print (remove-duplicates(append A B)))
+
+(setf L1 (length A))
+(setf L2 (length B))
+(
+loop for I from 1 to L1 do
+   (cond
+          ((member (nth I A) B) (setf C (cons (nth I A) C))  )
+           ((not(member (nth I A) E)) (setf D (cons (nth I A) D))  )
+          
+   )                
+)
+
+(print C)
+(print (reduce #'remove C A))
+-----------------------------------------------------
+(setf A (read))
+
+(setf N (length A))
+(setf B '())
+
+(
+loop while (>= N 1) do
+          
+         (setf B (cons (reduce #'max A) B))
+          (setf A (set-difference A B))
+          (setf N (- N 1))
+)
+(print B)
+-----------------------------------------------
+(setf A (read))
+
+(setf N (length A))
+(setf B '())
+
+(
+loop while (>= N 1) do
+          
+         (setf B (cons (reduce #'max A) B))
+          (setf A (set-difference A B))
+          (setf N (- N 1))
+)
+(print B)
+------------------------------
+(setf A (read))
+(setf N (length A))
+(setf E (read))
+(
+loop for I from 0 to N do
+    (cond
+          ((equal (nth I A) E)  (print "element present"))
+         
+    )
+(return)
+(
+)
+
