@@ -6,7 +6,7 @@ Basic lisp programs for starters...
 
 Recommended Approach: Read the document,learn basics and try out the code..Its fairly easy to start...
 
-You will start enjoying 'LISPING' when you are finally able to write new logic on your own. ..
+Enjoy 'LISPING' when you are finally able to write new logic on your own. ..
 
 ### Prerequisites
 
