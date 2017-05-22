@@ -28,6 +28,10 @@ In terminal: clisp filename.lisp or Run from a IDE for lisp (windows).
 
 You may also execute lisp online
 
+You may also use emac/vim/notepad++ etc as editors..
+
+Alternately type clisp in terminal and you can directly start coding!!!
+
 ## Versioning
 
 Version 1.0
